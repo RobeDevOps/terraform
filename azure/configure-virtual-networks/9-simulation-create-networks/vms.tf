@@ -7,11 +7,11 @@ resource "azurerm_windows_virtual_machine" "vms" {
   name                = each.key
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
-  size                = "Standard_F2"
+  size                = "Standard_A1_v2"
   admin_username      = "adminuser"
   admin_password      = "P@$$w0rd1234!"
   network_interface_ids = [
-    azurerm_network_interface.vms_nic[each.key].id,
+    azurerm_network_interface.vms_nic[each.key].id
   ]
 
   os_disk {

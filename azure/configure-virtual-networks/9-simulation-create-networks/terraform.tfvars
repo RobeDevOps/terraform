@@ -1,10 +1,10 @@
-rg_location = "East US"
+rg_location = "Central US"
 virtual_network = {
   name          = "vnet1"
   address_space = ["10.1.0.0/16"]
 }
 
 subnet = {
-  name             = "default"
+  name             = "subnet1"
   address_prefixes = ["10.1.0.0/24"]
 }
